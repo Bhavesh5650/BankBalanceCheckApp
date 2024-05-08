@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankServicesActivity">
+
+    <LinearLayout
+        android:id="@+id/AppBarOfBankService"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:background="@color/appBar">
+
+        <TextView
+            android:id="@+id/placeOfBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Balance Check App"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/AppBarOfBankService">
+
+        <RelativeLayout
+            android:id="@+id/bankingHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtBanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Banking"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/txtBanking"/>
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/balanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_below="@id/bankingHeader">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/BankBalanceCard"
+                    android:layout_width="140dp"
+                    android:layout_height="165dp"
+                    app:cardElevation="10dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/banking_card"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bank             Balance"
+                        android:layout_marginBottom="13dp"
+                        android:textSize="19sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/IfscCodeCard"
+                    android:layout_toEndOf="@id/BankBalanceCard"
+                    android:layout_width="140dp"
+                    android:layout_height="165dp"
+                    app:cardElevation="10dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="18dp"
+                        android:src="@drawable/note"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="IFSC               Code"
+                        android:layout_marginBottom="13dp"
+                        android:textSize="19sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/nearAtmCard"
+                    android:layout_toEndOf="@id/IfscCodeCard"
+                    android:layout_width="140dp"
+                    android:layout_height="165dp"
+                    app:cardElevation="10dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="18dp"
+                        android:src="@drawable/location_pin"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Near By          ATM"
+                        android:layout_marginBottom="13dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/netBankingCard"
+                    android:layout_toEndOf="@id/nearAtmCard"
+                    android:layout_width="140dp"
+                    android:layout_height="165dp"
+                    app:cardElevation="10dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="18dp"
+                        android:src="@drawable/investment"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Net              Banking"
+                        android:layout_marginBottom="13dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/toolsHeader"
+            android:layout_below="@id/balanceLayout"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Tools"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@id/txtTools"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/toolsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/emiCalcCard"
+                android:layout_width="175dp"
+                android:layout_height="190dp"
+                app:cardElevation="10dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="19dp"
+                    android:src="@drawable/budget"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EMI         Calculator"
+                    android:layout_marginBottom="13dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sipCalcCard"
+                android:layout_alignParentEnd="true"
+                android:layout_width="175dp"
+                android:layout_height="190dp"
+                app:cardElevation="10dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="19dp"
+                    android:src="@drawable/sip"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SIP           Calculator"
+                    android:layout_marginBottom="13dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gstCalcCard"
+                android:layout_below="@id/emiCalcCard"
+                android:layout_width="175dp"
+                android:layout_height="195dp"
+                app:cardElevation="10dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="19dp"
+                    android:src="@drawable/tax_calculate"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GST          Calculator"
+                    android:layout_marginBottom="13dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fdCalcCard"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/sipCalcCard"
+                android:layout_width="175dp"
+                android:layout_height="195dp"
+                app:cardElevation="10dp"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="19dp"
+                    android:src="@drawable/fd"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FD                    Calculator"
+                    android:layout_marginBottom="13dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:gravity="center"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FdCalculationActivity">
+
+    <LinearLayout
+        android:id="@+id/AppBarOfFd"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:background="@color/appBar">
+
+        <ImageView
+            android:id="@+id/backOfFd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FD Calculator"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_below="@id/AppBarOfFd">
+
+        <RelativeLayout
+            android:id="@+id/inputForFd"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/investFdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:hint="Total Investment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/investFdEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/rateFdLayout"
+                android:layout_below="@id/investFdLayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:hint="Rate Of Interest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rateFdEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/timeFdLayout"
+                android:layout_below="@id/rateFdLayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                android:hint="Time Period">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/timeFdEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answerOfFdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/inputForFd">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@drawable/shape_answer">
+
+                <RelativeLayout
+                    android:id="@+id/amountLayout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invested Amount"
+                        android:letterSpacing="0.02"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/answerOfInvestAmountFd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/librefranklin_regular"
+                        android:letterSpacing="0.03"
+                        android:text="00000"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/interestLayout"
+                    android:layout_below="@id/amountLayout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Est. Return"
+                        android:letterSpacing="0.03"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/answerOfReturnFd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00000"
+                        android:letterSpacing="0.03"
+                        android:fontFamily="@font/librefranklin_regular"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/paymentLayout"
+                    android:layout_below="@id/interestLayout"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Value"
+                        android:letterSpacing="0.03"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/answerOfValueFd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00000"
+                        android:letterSpacing="0.03"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/librefranklin_regular"
+                        android:textSize="16sp"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/fdAnswerCalcBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/answerOfFdLayout"
+            android:layout_centerInParent="true"
+            android:text="Calculate"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#E8203ABA"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
