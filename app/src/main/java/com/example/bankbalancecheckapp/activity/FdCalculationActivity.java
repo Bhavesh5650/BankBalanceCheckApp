@@ -62,8 +62,11 @@ public class FdCalculationActivity extends AppCompatActivity {
                     double t = Double.parseDouble(time_fd);
 
                     double ans = p + ( p * r * t / 100);
+                    double est_return = ans - p ;
 
                     binding.answerOfValueFd.setText(String.format("%.2f",ans));
+                    binding.answerOfInvestAmountFd.setText(String.format("%.2f",p));
+                    binding.answerOfReturnFd.setText(String.format("%.2f",est_return));
                 }
 
             }
