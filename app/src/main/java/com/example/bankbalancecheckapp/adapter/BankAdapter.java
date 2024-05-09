@@ -1,4 +1,4 @@
-package com.example.bankbalancecheckapp;
+package com.example.bankbalancecheckapp.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,20 +6,22 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.bankbalancecheckapp.R;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class BankAdapter extends BaseAdapter {
 
-    String[] banks = {};
+    String[] bankArray = {};
 
-    public BankAdapter(String[] banks)
+    public BankAdapter(String[] bankArray)
     {
-        this.banks=banks;
+        this.bankArray=bankArray;
     }
     @Override
     public int getCount() {
 
-        return banks.length;
+        return bankArray.length;
     }
 
     @Override
@@ -36,7 +38,7 @@ public class BankAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bank_name_listview,parent,false);
         TextView txtOfBank = view.findViewById(R.id.txtOfBank);
-        txtOfBank.setText(banks[position]);
+        txtOfBank.setText(bankArray[position]);
         CircleImageView imageOfBank = view.findViewById(R.id.imageOfBank);
         imageOfBank.setImageResource(R.drawable.bank);
         return view;

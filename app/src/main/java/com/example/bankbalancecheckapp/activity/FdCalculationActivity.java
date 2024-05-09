@@ -1,4 +1,4 @@
-package com.example.bankbalancecheckapp;
+package com.example.bankbalancecheckapp.activity;
 
 import android.os.Bundle;
 import android.view.View;

@@ -4,9 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/appBar"
     android:layout_height="match_parent"
-    android:background="#E82141DF"
-    tools:context=".SplashActivity">
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/mobile_banking"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Balance Check App"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"/>
 
 
 

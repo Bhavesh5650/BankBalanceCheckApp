@@ -5,8 +5,236 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BalanceCheckActivity">
+    tools:context=".activity.BalanceCheckActivity">
 
+    <LinearLayout
+        android:id="@+id/AppBarOfBalanceCheck"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center"
+        android:background="@color/appBar">
 
+        <TextView
+            android:id="@+id/placeOfBankNameBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Balance Check App"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutOfAll"
+        android:layout_below="@id/AppBarOfBalanceCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:id="@+id/checkBalanceLayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCheckBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Check Balance"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/forCheckBalanceCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="10dp"
+                android:layout_below="@id/txtCheckBalance"
+                android:background="@drawable/for_call_shape"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/setTextForCheckBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000000"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/librefranklin_regular"
+                    android:textSize="19sp"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:background="@drawable/small_shape">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_call_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call Now"
+                        android:layout_marginHorizontal="8dp"
+                        android:textColor="#3459DA"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/miniStatementLayout"
+            android:layout_below="@id/checkBalanceLayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtMiniStatement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mini Statement"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/forMiniStatementCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="10dp"
+                android:layout_below="@id/txtMiniStatement"
+                android:background="@drawable/for_call_shape"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/setTextForMiniStatement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000000"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/librefranklin_regular"
+                    android:textSize="19sp"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:background="@drawable/small_shape">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_call_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call Now"
+                        android:layout_marginHorizontal="8dp"
+                        android:textColor="#3459DA"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/customerCareLayout"
+            android:layout_below="@id/miniStatementLayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtCustomerCare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Care No. "
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp"/>
+
+            <RelativeLayout
+                android:id="@+id/forCustomerCareCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="10dp"
+                android:layout_below="@id/txtCustomerCare"
+                android:background="@drawable/for_call_shape"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/setTextForCustomerCare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000000"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/librefranklin_regular"
+                    android:textSize="19sp"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:background="@drawable/small_shape">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_call_24"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call Now"
+                        android:layout_marginHorizontal="8dp"
+                        android:textColor="#3459DA"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#D61313"
+        android:layout_marginTop="10dp"
+        android:text="*Please Dial From Registred Mobile Number In Bank"
+        android:layout_below="@id/layoutOfAll"/>
 
 </RelativeLayout>

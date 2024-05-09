@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,25 +16,25 @@
         android:theme="@style/Theme.BankBalanceCheckApp"
         tools:targetApi="31">
         <activity
-            android:name=".BalanceCheckActivity"
+            android:name=".activity.BalanceCheckActivity"
             android:exported="false" />
         <activity
-            android:name=".FdCalculationActivity"
+            android:name=".activity.FdCalculationActivity"
             android:exported="false" />
         <activity
-            android:name=".GstCalculationActivity"
+            android:name=".activity.GstCalculationActivity"
             android:exported="false" />
         <activity
-            android:name=".SipCalculationActivity"
+            android:name=".activity.SipCalculationActivity"
             android:exported="false" />
         <activity
-            android:name=".EmiCalculationActivity"
+            android:name=".activity.EmiCalculationActivity"
             android:exported="false" />
         <activity
-            android:name=".BankServicesActivity"
+            android:name=".activity.BankServicesActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +43,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true" />
     </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
 </manifest>
